@@ -2,7 +2,7 @@ import { galleryItems } from './gallery-items.js';
 
 const gallery = document.querySelector('.gallery');
 
-const foto = galleryItems.map(item =>
+const markup = galleryItems.map(item =>
     `<li class = "gallery__item">
         <a class = "gallery__link" href="${item.original}"> 
             <img
@@ -14,7 +14,7 @@ const foto = galleryItems.map(item =>
         </a>
     </li>`);
 
-gallery.insertAdjacentHTML('beforeend', foto.join(''));
+gallery.insertAdjacentHTML('beforeend', markup.join(''));
 
 gallery.addEventListener('click', onClick)
 let instance = null;
